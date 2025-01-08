@@ -1,0 +1,78 @@
+district_id,city,state_name,region,division
+1,"New York City","New York",Northeast,"Middle Atlantic"
+2,Jacksonville,Florida,South,"South Atlantic"
+3,Columbus,Ohio,Midwest,"East North Central"
+4,Charlotte,"North Carolina",South,"South Atlantic"
+5,Indianapolis,Indiana,Northeast,"East North Central"
+6,Seattle,Washington,West,Pacific
+7,Denver,Colorado,West,Mountain
+8,Washington,"District of Columbia",South,"South Atlantic"
+9,Boston,Massachusetts,Northeast,"New England"
+10,Detroit,Michigan,Midwest,"East North Central"
+11,Nashville,Tennessee,South,"East South Central"
+12,Portland,Oregon,West,Pacific
+13,"Oklahoma City",Oklahoma,South,"West South Central"
+14,"Las Vegas",Nevada,West,Mountain
+15,Louisville,Kentucky,South,"East South Central"
+16,Baltimore,Maryland,South,"South Atlantic"
+17,Milwaukee,Wisconsin,Midwest,"East North Central"
+18,Albuquerque,"New Mexico",West,Mountain
+19,Atlanta,Georgia,South,"South Atlantic"
+20,"Kansas City",Missouri,Midwest,"West North Central"
+21,Omaha,Nebraska,Midwest,"West North Central"
+22,"Virginia Beach",Virginia,South,"South Atlantic"
+23,Minneapolis,Minnesota,Midwest,"West North Central"
+24,"New Orleans",Louisiana,South,"West South Central"
+25,Wichita,Kansas,Midwest,"West North Central"
+26,Honolulu,Hawaii,West,Pacific
+27,"San Antonio",Texas,South,"West South Central"
+28,Anchorage,Alaska,West,Pacific
+29,Newark,"New Jersey",Northeast,"Middle Atlantic"
+30,Boise,Idaho,West,Mountain
+31,"Des Moines",Iowa,Midwest,"West North Central"
+32,Birmingham,Alabama,South,"East South Central"
+33,"Salt Lake City",Utah,West,Mountain
+34,"Little Rock",Arkansas,South,"West South Central"
+35,"Sioux Falls","South Dakota",Midwest,"West North Central"
+36,Providence,"Rhode Island",Northeast,"New England"
+37,Jackson,Mississippi,South,"East South Central"
+38,Bridgeport,Connecticut,Northeast,"New England"
+39,Charleston,"South Carolina",South,"South Atlantic"
+40,Fargo,"North Dakota",Midwest,"West North Central"
+41,Manchester,"New Hampshire",Northeast,"New England"
+42,Billings,Montana,West,Mountain
+43,Wilmington,Delaware,South,"South Atlantic"
+44,Portland,Maine,Northeast,"New England"
+45,Cheyenne,Wyoming,West,Mountain
+46,"San Diego",California,West,Pacific
+47,Charleston,"West Virginia",South,"South Atlantic"
+48,Worcester,Massachusetts,Northeast,"New England"
+49,Burlington,Vermont,Northeast,"New England"
+50,Buffalo,"New York",Northeast,"Middle Atlantic"
+51,Springfield,Massachusetts,Northeast,"New England"
+52,"New Haven",Connecticut,Northeast,"New England"
+53,Hartford,Connecticut,Northeast,"New England"
+54,Houston,Texas,South,"West South Central"
+55,Lowell,Massachusetts,Northeast,"New England"
+56,Cambridge,Massachusetts,Northeast,"New England"
+57,"New Bedford",Massachusetts,Northeast,"New England"
+58,Brockton,Massachusetts,Northeast,"New England"
+59,Quincy,Massachusetts,Northeast,"New England"
+60,Lynn,Massachusetts,Northeast,"New England"
+61,"Fall River",Massachusetts,Northeast,"New England"
+62,Nashua,"New Hampshire",Northeast,"New England"
+63,Norwalk,Connecticut,Northeast,"New England"
+64,Phoenix,Arizona,West,Mountain
+65,Newton,Massachusetts,Northeast,"New England"
+66,Warwick,"Rhode Island",Northeast,"New England"
+67,Danbury,Connecticut,Northeast,"New England"
+68,Cranston,"Rhode Island",Northeast,"New England"
+69,Lawrence,Massachusetts,Northeast,"New England"
+70,"Los Angeles",California,West,Pacific
+71,Somerville,Massachusetts,Northeast,"New England"
+72,Philadelphia,Pennsylvania,Northeast,"Middle Atlantic"
+73,"New Britain",Connecticut,Northeast,"New England"
+74,Chicago,Illinois,Northeast,"East North Central"
+75,Rochester,"New York",Northeast,"Middle Atlantic"
+76,Yonkers,"New York",Northeast,"Middle Atlantic"
+77,Syracuse,"New York",Northeast,"Middle Atlantic"

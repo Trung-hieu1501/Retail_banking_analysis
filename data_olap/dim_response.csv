@@ -1,0 +1,9 @@
+response_id,company_response
+1,"Closed with explanation"
+2,"Closed with relief"
+3,"Closed without relief"
+4,"Closed with non-monetary relief"
+5,"Untimely response"
+6,Closed
+7,"Closed with monetary relief"
+8,"In progress"

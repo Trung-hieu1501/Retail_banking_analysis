@@ -1,0 +1,304 @@
+version: 2
+models:
+  - name: dim_date
+    description: "Ngày tháng trong hệ thống"
+    columns:
+      - name: date_id
+        description: "ID của ngày (Ngày tháng)"
+        tests:
+          - unique
+          - not_null
+      - name: day
+        description: "Ngày trong tháng"
+      - name: week
+        description: "Tuần trong năm"
+      - name: month
+        description: "Tháng"
+      - name: quarter
+        description: "Quý"
+      - name: year
+        description: "Năm"
+
+  - name: dim_district
+    description: "Thông tin khu vực"
+    columns:
+      - name: district_id
+        description: "ID khu vực"
+        tests:
+          - unique
+          - not_null
+      - name: city
+        description: "Tên thành phố"
+      - name: state_name
+        description: "Tên tiểu bang"
+      - name: region
+        description: "Khu vực"
+      - name: division
+        description: "Phân chia"
+
+  - name: dim_age
+    description: "Nhóm tuổi của khách hàng"
+    columns:
+      - name: age_id
+        description: "ID nhóm tuổi"
+        tests:
+          - unique
+          - not_null
+      - name: age_group
+        description: "Tên nhóm tuổi"
+
+  - name: dim_client
+    description: "Thông tin khách hàng"
+    columns:
+      - name: client_id
+        description: "ID khách hàng"
+        tests:
+          - unique
+          - not_null
+      - name: age_id
+        description: "ID nhóm tuổi"
+        tests:
+          - not_null
+      - name: district_id
+        description: "ID khu vực"
+        tests:
+          - not_null
+      - name: sex
+        description: "Giới tính"
+        tests:
+          - not_null
+
+  - name: dim_frequency
+    description: "Tần suất tài khoản"
+    columns:
+      - name: frequency_id
+        description: "ID tần suất"
+        tests:
+          - unique
+          - not_null
+      - name: frequency
+        description: "Tên tần suất"
+
+  - name: dim_account
+    description: "Thông tin tài khoản"
+    columns:
+      - name: account_id
+        description: "ID tài khoản"
+        tests:
+          - unique
+          - not_null
+      - name: district_id
+        description: "ID khu vực"
+        tests:
+          - not_null
+      - name: frequency_id
+        description: "ID tần suất"
+        tests:
+          - not_null
+      - name: date
+        description: "Ngày tài khoản được tạo"
+        tests:
+          - not_null
+
+  - name: dim_disposition
+    description: "Thông tin trạng thái tài khoản"
+    columns:
+      - name: disp_id
+        description: "ID trạng thái"
+        tests:
+          - unique
+          - not_null
+      - name: client_id
+        description: "ID khách hàng"
+        tests:
+          - not_null
+      - name: account_id
+        description: "ID tài khoản"
+        tests:
+          - not_null
+      - name: type
+        description: "Loại trạng thái"
+
+  - name: dim_type_card
+    description: "Loại thẻ"
+    columns:
+      - name: type_id
+        description: "ID loại thẻ"
+        tests:
+          - unique
+          - not_null
+      - name: type
+        description: "Tên loại thẻ"
+
+  - name: dim_card
+    description: "Thông tin thẻ"
+    columns:
+      - name: card_id
+        description: "ID thẻ"
+        tests:
+          - unique
+          - not_null
+      - name: disp_id
+        description: "ID trạng thái"
+      - name: type_id
+        description: "ID loại thẻ"
+      - name: date
+        description: "Ngày phát hành thẻ"
+
+  - name: dim_purpose
+    description: "Mục đích vay"
+    columns:
+      - name: purpose_id
+        description: "ID mục đích vay"
+        tests:
+          - unique
+          - not_null
+      - name: purpose
+        description: "Tên mục đích vay"
+
+  - name: fact_loan
+    description: "Thông tin khoản vay"
+    columns:
+      - name: loan_id
+        description: "ID khoản vay"
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        description: "ID tài khoản"
+        tests:
+          - not_null
+      - name: amount
+        description: "Số tiền vay"
+        tests:
+          - not_null
+      - name: duration
+        description: "Thời gian vay"
+        tests:
+          - not_null
+      - name: location
+        description: "Vị trí"
+        tests:
+          - not_null
+      - name: purpose_id
+        description: "ID mục đích vay"
+        tests:
+          - not_null
+      - name: date
+        description: "Ngày khoản vay được tạo"
+
+  - name: dim_typetrans
+    description: "Loại giao dịch"
+    columns:
+      - name: type_id
+        description: "ID loại giao dịch"
+        tests:
+          - unique
+          - not_null
+      - name: type
+        description: "Tên loại giao dịch"
+
+  - name: dim_operation
+    description: "Loại hoạt động giao dịch"
+    columns:
+      - name: operation_id
+        description: "ID loại hoạt động"
+        tests:
+          - unique
+          - not_null
+      - name: operation
+        description: "Tên hoạt động giao dịch"
+
+  - name: dim_bank
+    description: "Thông tin ngân hàng"
+    columns:
+      - name: bank_id
+        description: "ID ngân hàng"
+        tests:
+          - unique
+          - not_null
+      - name: bank
+        description: "Tên ngân hàng"
+
+  - name: fact_trans
+    description: "Thông tin giao dịch"
+    columns:
+      - name: trans_id
+        description: "ID giao dịch"
+        tests:
+          - unique
+          - not_null
+      - name: account_id
+        description: "ID tài khoản"
+        tests:
+          - not_null
+      - name: type_id
+        description: "ID loại giao dịch"
+        tests:
+          - not_null
+      - name: operation_id
+        description: "ID loại hoạt động giao dịch"
+        tests:
+          - not_null
+      - name: bank_id
+        description: "ID ngân hàng"
+        tests:
+          - not_null
+      - name: amount
+        description: "Số tiền giao dịch"
+        tests:
+          - not_null
+      - name: balance
+        description: "Số dư tài khoản sau giao dịch"
+        tests:
+          - not_null
+      - name: date
+        description: "Ngày giao dịch"
+
+  - name: dim_product
+    description: "Sản phẩm khiếu nại"
+    columns:
+      - name: product_id
+        description: "ID sản phẩm"
+        tests:
+          - unique
+          - not_null
+      - name: product
+        description: "Tên sản phẩm"
+      - name: sub_product
+        description: "Tên phụ sản phẩm"
+
+  - name: dim_submitted_via
+    description: "Phương thức gửi khiếu nại"
+    columns:
+      - name: via_id
+        description: "ID phương thức gửi"
+        tests:
+          - unique
+          - not_null
+      - name: submitted_via
+        description: "Phương thức gửi khiếu nại"
+
+  - name: fact_complaint
+    description: "Thông tin khiếu nại"
+    columns:
+      - name: complaint_id
+        description: "ID khiếu nại"
+        tests:
+          - not_null
+      - name: client_id
+        description: "ID khách hàng"
+        tests:
+          - not_null
+      - name: date_received
+        description: "Ngày nhận khiếu nại"
+        tests:
+          - not_null
+      - name: product_id
+        description: "ID sản phẩm"
+        tests:
+          - not_null
+      - name: via_id
+        description: "ID phương thức gửi"
+        tests:
+          - not_null

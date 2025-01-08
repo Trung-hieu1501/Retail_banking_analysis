@@ -1,0 +1,7 @@
+operation_id,operation
+1,"Credit in Cash"
+2,"Collection from Another Bank"
+3,"Remittance to Another Bank"
+4,"Cash Withdrawal"
+5,"Credit Card Withdrawal"
+6,"Unspecified Transaction"
